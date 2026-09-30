@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA PROFIL — PABW 2026/2027 — Pertemuan 4
+  ==================================================================
+  Berkas ini SUDAH LENGKAP dan sudah lolos W3C Nu Html Checker serta
+  Lighthouse Accessibility. JANGAN mengubah struktur, landmark, label,
+  atau alt untuk memperbaiki tampilan — tampilan diubah dari berkas CSS.
+-->
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Profil Farrel Priya Arka Agrapana — PABW 2026/2027</title>
+  <meta name="description" content="Halaman profil mahasiswa PABW: tentang saya, karya, dan kontak.">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/responsif.css">
+</head>
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <header class="kepala">
+    <div class="header-baris">
+      <div>
+        <h1>Farrel Priya Arka Agrapana</h1>
+        <p class="tagline">Mahasiswa Informatika yang sedang belajar membangun web.</p>
+      </div>
+      <input type="checkbox" id="tema" class="pengalih-tema">
+      <label for="tema" class="tombol-tema">Tema gelap</label>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#karya">Karya</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="utama">
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+        <img src="media/foto-profil.jpg"
+             alt="Foto diri Farrel Priya Arka Agrapana."
+             width="480" height="655" loading="lazy">
+        <figcaption>Foto profil saya.</figcaption>
+      </figure>
+
+      <p>Saya mahasiswa Program Studi Informatika Universitas Islam Indonesia,
+         kelas E. Saya tertarik pada pengembangan web, khususnya bagian
+         tampilan, karena di sana keputusan teknis langsung terlihat
+         hasilnya. Semester ini saya sedang memperdalam CSS, khususnya
+         design token dan tata letak dengan flexbox.</p>
+
+      <div class="table-wrap">
+      <table>
+        <caption>Kegiatan yang saya ikuti semester ini</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Peran</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Praktikum PABW</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-09">September 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Kelas Terbuka Kampus</th>
+            <td>Peserta</td>
+            <td><time datetime="2026-10">Oktober 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Organisasi kemahasiswaan</th>
+            <td>Anggota</td>
+            <td><time datetime="2026">2026</time></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+      <ul>
+        <li>Halaman Kelas Terbuka Kampus — praktikum P03, HTML semantik dan form.</li>
+        <li>Halaman profil ini — praktikum P04, CSS fundamental dan design token, 2026.</li>
+        <li>Latihan struktur data sederhana — tugas praktikum semester ini, 2026.</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi saya</h2>
+      <p>Isi formulir berikut. Semua kolom bertanda wajib harus diisi.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data pengirim</legend>
+
+          <p class="form-kolom">
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" type="text"
+                   autocomplete="name" required>
+          </p>
+
+          <p class="form-kolom">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </p>
+
+          <p class="form-kolom">
+            <label for="nim">NIM</label>
+            <input id="nim" name="nim" type="text" inputmode="numeric"
+                   pattern="[0-9]{8}" aria-describedby="nim-bantuan" required>
+            <span id="nim-bantuan">Delapan digit angka, contoh 25523185.</span>
+          </p>
+
+          <p class="form-kolom">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+          </p>
+
+          <button type="submit">Kirim</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- STRUKTUR TAMBAHAN (Lembar B.3) -->
+
+    <section id="lini-masa">
+      <h2>Perjalanan saya</h2>
+      <ol class="lini">
+        <li><time datetime="2025-08">Agustus 2025</time> — mulai kuliah di Informatika UII.</li>
+        <li><time datetime="2026-09">September 2026</time> — pertama kali menulis HTML dan CSS di praktikum PABW.</li>
+        <li><time datetime="2026-09">September 2026</time> — membangun halaman profil ini dengan design token.</li>
+      </ol>
+    </section>
+
+    <section id="keterampilan">
+      <h2>Keterampilan</h2>
+      <dl class="keterampilan">
+        <dt>HTML semantik</dt>
+        <dd>Landmark, heading berurutan, tabel data dengan caption dan th scope.</dd>
+
+        <dt>Git dasar</dt>
+        <dd>add, commit, push, serta diff, log, dan restore.</dd>
+
+        <dt>CSS</dt>
+        <dd>Sedang belajar: design token, flexbox, dan tema gelap.</dd>
+      </dl>
+    </section>
+
+    <section id="tanya-jawab">
+      <h2>Tanya jawab</h2>
+
+      <details>
+        <summary>Apa yang sedang saya pelajari?</summary>
+        <p>CSS dan cara menyusun tampilan yang konsisten lewat design token.</p>
+      </details>
+
+      <details>
+        <summary>Alat apa yang saya pakai sehari-hari?</summary>
+        <p>VS Code dan Chrome. DevTools saya buka setiap kali mengerjakan tampilan.</p>
+      </details>
+
+      <details>
+        <summary>Mengapa saya memilih warna biru navy untuk halaman ini?</summary>
+        <p>Warna itu saya ambil dari kesan tegas dan teknis yang ingin saya tampilkan di portofolio saya.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <p>Farrel Priya Arka Agrapana · 25523185 · <time datetime="2026">2026</time></p>
+  </footer>
+</body>
+</html>
