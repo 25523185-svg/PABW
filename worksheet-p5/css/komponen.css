@@ -1,0 +1,103 @@
+/* --- Form --- */
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input, select, textarea {
+  font: inherit;                /* kolom isian ikut ukuran huruf halaman */
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-primary-fg);
+  cursor: pointer;
+  width: fit-content;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+legend { font-weight: 600; padding-inline: var(--space-2); }
+
+#nim-bantuan { font-size: var(--text-sm); color: var(--color-fg); }
+
+/* --- Keadaan fokus — wajib terlihat --- */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* --- Isian tidak sah — hanya setelah disentuh pengguna --- */
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+/* --- Struktur tambahan: lini masa --- */
+.lini {
+  list-style: none;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.lini time { font-weight: 600; color: var(--color-primary); }
+
+/* --- Struktur tambahan: keterampilan --- */
+.keterampilan { display: flex; flex-direction: column; gap: var(--space-1); }
+.keterampilan dt { font-weight: 600; }
+.keterampilan dt:not(:first-child) { padding-top: var(--space-2); }
+.keterampilan dd { padding-left: var(--space-4); }
+
+/* --- Struktur tambahan: karya sebagai galeri kartu --- */
+#karya ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+#karya li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  min-height: 8rem;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  overflow-wrap: anywhere;
+}
+
+/* --- Struktur tambahan: tanya jawab --- */
+#tanya-jawab { gap: var(--space-2); }
+#tanya-jawab details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+#tanya-jawab summary { cursor: pointer; font-weight: 600; }
