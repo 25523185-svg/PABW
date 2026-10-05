@@ -1,0 +1,37 @@
+/* ===== dasar: layar sempit, berlaku di semua lebar (tanpa media query) ===== */
+main {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "tentang"
+    "lini"
+    "ket"
+    "karya"
+    "kontak"
+    "tanya";
+}
+#karya ul {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* isi yang menyesuaikan */
+.table-wrap { overflow-x: auto; }
+p { font-size: 1rem; line-height: 1.6; }
+
+/* ===== tablet: galeri dua kolom ===== */
+@media (min-width: 48rem) {
+  #karya ul { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== desktop: sidebar bersanding dengan konten ===== */
+@media (min-width: 60rem) {
+  main {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    grid-template-areas:
+      "tentang tentang"
+      "lini    karya"
+      "ket     kontak"
+      "tanya   tanya";
+  }
+  #karya ul { grid-template-columns: repeat(3, 1fr); }
+}
