@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  box-sizing: border-box;      /* width sudah mencakup padding + border */
+}
+
+* { margin: 0; }               /* hapus jarak bawaan; jarak diatur dengan gap */
+
+img { max-width: 100%; height: auto; display: block; }
+
+html {
+  font-size: 100%;             /* ikuti pengaturan pengguna, jangan dipatok */
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--text-md);
+  line-height: 1.6;            /* nyaman untuk teks isi */
+  color: var(--color-fg);
+  background: var(--color-bg);
+}
+
+h1, h2, h3 { color: var(--color-primary); }
+h1 { font-size: var(--text-3xl); line-height: 1.15; }
+h2 { font-size: var(--text-xl);  line-height: 1.25; }
+h3 { font-size: var(--text-md); }
+
+/* Batasi panjang baris supaya mata mudah berpindah baris */
+main p { max-width: 60ch; }
+
+a { color: var(--color-primary); }
+
+.lewati {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-surface);
+  color: var(--color-fg);
+  padding: var(--space-2) var(--space-4);
+  z-index: 10;
+}
+.lewati:focus { left: var(--space-2); top: var(--space-2); }
