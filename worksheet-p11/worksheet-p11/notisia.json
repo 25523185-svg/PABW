@@ -1,0 +1,12 @@
+{
+  "sumber": { "nama": "Kabar Kampus Informatika", "diperbarui": "2026-10-12" },
+  "total": 5,
+  "masihAdaLagi": false,
+  "notisia": [
+    { "id": 1, "judul": "Pekan Orientasi Praktikum PABW", "ringkasan": "Praktikum Pengembangan Aplikasi Berbasis Web dimulai dengan pengenalan alur kerja Git dan GitHub.", "kategori": "praktikum", "tanggal": "2026-09-07", "penting": true, "tautan": null },
+    { "id": 2, "judul": "Jadwal Ujian CPMK 1", "ringkasan": "Ujian CPMK 1 dilaksanakan pada Pertemuan 7 dan mencakup html, CSS, dan memperbaiki debug.", "kategori": "akademik", "tanggal": "2026-10-06", "penting": true, "tautan": null },
+    { "id": 3, "judul": "Lab Komputer Dibuka Sampai Malam", "ringkasan": "Laboratorium Informatika membuka layanan tambahan hingga pukul 21.00 selama masa praktikum.", "kategori": "fasilitas", "tanggal": "2026-10-08", "penting": false, "tautan": null },
+    { "id": 4, "judul": "Pelatihan Dasar DevTools", "ringkasan": "Pelatihan singkat memakai panel Console dan Network untuk menelusuri galat jaringan.", "kategori": "praktikum", "tanggal": "2026-10-09", "penting": false, "tautan": null },
+    { "id": 5, "judul": "Pengumpulan Worksheet P10", "ringkasan": "Worksheet Pertemuan 10 diunggah ke repositori GitHub paling lambat pukul 23.59 pada hari yang sama.", "kategori": "akademik", "tanggal": "2026-10-12", "penting": true, "tautan": null }
+  ]
+}
